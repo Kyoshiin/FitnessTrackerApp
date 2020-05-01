@@ -7,13 +7,15 @@ public class Exercise {
     private int mImageResourceId;
     private int mCountDone;
     private int mTotalSets;
+    private int mBackgrndclrID;
 
-    public Exercise(String name, int totalsets, int CountDone, int img_resourse)
+    public Exercise(String name, int totalsets, int CountDone, int img_resourse, int colorId)
     {
         mExerciseName = name;
         mTotalSets = totalsets;
         mCountDone = CountDone;
         mImageResourceId = img_resourse;
+        mBackgrndclrID = R.color.Incomplete_task;
     }
 
     //method to get exercise name
@@ -43,4 +45,13 @@ public class Exercise {
         return Integer.toString(mCountDone);
     }
 
+    //method to set DONE-background
+    public void setBackGroundColour() {
+        mBackgrndclrID = R.color.Completed_task;
+    }
+
+    //method to get DONE-background
+    public int getBackGroundColour() {
+        return mBackgrndclrID;
+    }
 }
